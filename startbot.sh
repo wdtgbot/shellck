@@ -23,17 +23,17 @@ chmod 0777 /tracker.sh
 
 
 
-git clone "https://github.com/666wcy/ARPT-Bot"  >> /dev/null 2>&1
+git clone "https://github.com/wdtgbot/abot"  >> /dev/null 2>&1
 mkdir /bot/
-mv /ARPT-Bot/bot/* /bot/
-cp /ARPT-Bot/nginx.conf /etc/nginx/
-cp /ARPT-Bot/config/upload.sh /
+mv /abot/bot/* /bot/
+cp /abot/nginx.conf /etc/nginx/
+cp /abot/config/upload.sh /
 chmod 0777 /upload.sh
 mkdir /index/
-cp /ARPT-Bot/index.html /index/
+cp /abot/index.html /index/
 chmod 0777 /index/index.html
 chmod 0777 /bot/ -R
-rm -rf /ARPT-Bot
+rm -rf /abot
 python3 /bot/nginx.py
 nginx -c /etc/nginx/nginx.conf
 nginx -s reload

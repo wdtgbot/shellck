@@ -17,18 +17,24 @@ mkdir /.config/
 mkdir /.config/rclone
 touch /.config/rclone/rclone.conf
 echo "$Rclone" >>/.config/rclone/rclone.conf
-wget git.io/tracker.sh
-chmod 0777 /tracker.sh
-/bin/bash tracker.sh "/root/.aria2/aria2.conf"
+#wget git.io/tracker.sh
+#chmod 0777 /tracker.sh
+#/bin/bash tracker.sh "/root/.aria2/aria2.conf"
 
 
 
 git clone "https://github.com/wdtgbot/abot"  >> /dev/null 2>&1
 mkdir /bot/
 mv /abot/bot/* /bot/
+cp /abot/config/* /root/.aria2/
 cp /abot/nginx.conf /etc/nginx/
 cp /abot/config/upload.sh /
 chmod 0777 /upload.sh
+chmod 0777 /root/.aria2/delete.sh
+chmod 0777 /root/.aria2/upload.sh
+chmod 0777 /root/.aria2/clean.sh
+tracker_list=`curl -Ns https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt | awk '$1' | tr '\n' ',' | cat`
+echo "bt-tracker=$tracker_list" >> /root/.aria2/aria2.conf
 mkdir /index/
 cp /abot/index.html /index/
 chmod 0777 /index/index.html

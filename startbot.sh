@@ -43,7 +43,7 @@ rm -rf /abot
 python3 /bot/nginx.py
 nginx -c /etc/nginx/nginx.conf
 nginx -s reload
-
+nohup rclone rcd --rc-user=root --rc-pass=$Aria2_secret --rc-allow-origin="https://elonh.github.io"
 nohup aria2c --conf-path=/root/.aria2/aria2.conf --rpc-listen-port=8080 --rpc-secret=$Aria2_secret &
 #nohup python3 /bot/web.py &
 

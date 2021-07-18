@@ -2,6 +2,8 @@
 /usr/bin/python3 -m pip install --upgrade pip
 pip3 install  pyrogram --upgrade
 pip3 install mutagen
+pip3 install nhentai --upgrade
+pip3 install beautifulsoup4 --upgrade
 service caddy start
 yes "4" | bash status.sh s
 

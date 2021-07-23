@@ -5,6 +5,7 @@ pip3 install mutagen --upgrade
 pip3 install nhentai --upgrade
 pip3 install beautifulsoup4 --upgrade
 pip3 install lxml --upgrade
+apt-get install libxml2-dev libxslt-dev -y
 service caddy start
 yes "4" | bash status.sh s
 

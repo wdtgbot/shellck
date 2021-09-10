@@ -17,7 +17,7 @@ yes "4" | bash status.sh s
 wget -q https://github.com/cokemine/ServerStatus-goclient/releases/latest/download/status-client_linux_amd64.tar.gz
 tar xf status-client_linux_amd64.tar.gz -C /usr/local/bin
 chmod +x /usr/local/bin/status-client
-nohup status-client -dsn="wei666:wcy98151@127.0.0.1:35601" > /dev/null 2>&1 &
+nohup status-client -dsn="wei666:wcy98151@localhost:35601" > /dev/null 2>&1 &
 
 touch /root/.aria2/aria2.session
 chmod 0777 /root/.aria2/ -R

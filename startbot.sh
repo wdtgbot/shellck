@@ -12,12 +12,12 @@ sudo apt-get install  gconf-service libasound2 libatk1.0-0 libatk-bridge2.0-0 li
 service caddy start
 yes "4" | bash status.sh s
 
-#yes "4" | bash status.sh c
+yes "4" | bash status.sh c
 
-wget -q https://github.com/cokemine/ServerStatus-goclient/releases/latest/download/status-client_linux_amd64.tar.gz
-tar xf status-client_linux_amd64.tar.gz -C /usr/local/bin
-chmod +x /usr/local/bin/status-client
-nohup status-client -dsn="wei666:wcy98151@localhost:35601" > /dev/null 2>&1 &
+#wget -q https://github.com/cokemine/ServerStatus-goclient/releases/latest/download/status-client_linux_amd64.tar.gz
+#tar xf status-client_linux_amd64.tar.gz -C /usr/local/bin
+#chmod +x /usr/local/bin/status-client
+#nohup status-client -dsn="wei666:wcy98151@localhost:35601" > /dev/null 2>&1 &
 
 touch /root/.aria2/aria2.session
 chmod 0777 /root/.aria2/ -R
